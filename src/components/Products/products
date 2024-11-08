@@ -1,0 +1,10 @@
+
+const products = [
+  { name: "Apple", price: 10, inStock: true },
+  { name: "Banana", price: 35, inStock: false },
+  { name: "Watermelon", price: 5, inStock: true },
+  { name: "Potato", price: 25, inStock: false },
+  { name: "Icecream", price: 40, inStock: false },
+];
+
+export default products

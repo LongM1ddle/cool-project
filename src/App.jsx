@@ -1,42 +1,32 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import nameMessage from './components/Name/name.jsx'
 import titleButton from './components/Title/title.jsx'
 import InputWithType from './components/Input/input.jsx'
 import ItemList from './components/Itemlist/itemlist.jsx'
+import greetingByTime from './components/GreetingByTime/greetingByTime.jsx'
+import ProductList from './components/ProductList/productList.jsx'
+import Notification from './components/Notification/notification.jsx'
+import DataLoader from './components/DataLoader/dataLoader.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
+
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React
+      <h1>
         {nameMessage({name: "Argen"})}
+        {greetingByTime()}
       </h1>
       {InputWithType({type: "text"})}
       {titleButton({title:"Argen"})}
       {ItemList({items:["argen", "daniel", "vlad"]})}
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      {DataLoader()}
+      {Notification()}
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
     </>
   )
 }
